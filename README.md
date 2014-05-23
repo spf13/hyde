@@ -83,7 +83,6 @@ Hyde's page orientation can be reversed with a single class.
 ```
 
 ## Author
-
 **Mark Otto**
 - <https://github.com/mdo>
 - <https://twitter.com/mdo>
