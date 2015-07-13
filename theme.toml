@@ -3,6 +3,7 @@ license = "MIT"
 description = "An elegant open source and mobile first theme"
 tags = ["blog", "company"]
 features = ["blog", ]
+min_version = 0.13
 
 [author]
     name = "spf13"
