@@ -14,7 +14,6 @@ It pairs a prominent sidebar with uncomplicated content.
   - [Themes](#themes)
   - [Reverse layout](#reverse-layout)
   - [Disqus](#disqus)
-- [Development](#development)
 - [Author](#author)
 - [Ported by](#ported-by)
 - [License](#license)
