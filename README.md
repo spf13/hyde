@@ -13,6 +13,7 @@ It pairs a prominent sidebar with uncomplicated content.
   - [Sticky sidebar content](#sticky-sidebar-content)
   - [Themes](#themes)
   - [Reverse layout](#reverse-layout)
+  - [Disqus](#disqus)
 - [Development](#development)
 - [Author](#author)
 - [Ported by](#ported-by)
@@ -90,6 +91,22 @@ Hyde's page orientation can be reversed with a single class.
 <body class="layout-reverse">
   ...
 </body>
+```
+
+### Disqus
+
+You can optionally enable a comment system powered by Disqus for the posts. Simply add the variable `disqusShortname` to the `params` in your config file.
+
+**TOML**
+```toml
+[params]
+  disqusShortname = "spf13"
+```
+
+**YAML**
+```yaml
+params:
+  disqusShortname: "spf13"
 ```
 
 ## Author
