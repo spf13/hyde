@@ -84,12 +84,22 @@ To create your own theme, look to the Themes section of [included CSS file](http
 
 ![Hyde with reverse layout](https://f.cloud.github.com/assets/98681/1831230/42b0d3ac-7384-11e3-8d54-2065afd03f9e.png)
 
-Hyde's page orientation can be reversed with a single class.
+To reverse page orientation, add the `layoutReverse` variable under `params`, like so:
 
-```html
-<body class="layout-reverse">
-  ...
-</body>
+**TOML**
+```toml
+theme = "hyde"
+
+[params]
+  layoutReverse = true
+```
+
+**YAML**
+```yaml
+theme: "hyde"
+
+params:
+  layoutReverse: true
 ```
 
 ### Disqus
