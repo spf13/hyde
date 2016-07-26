@@ -8,6 +8,7 @@ It pairs a prominent sidebar with uncomplicated content.
 
 ## Contents
 
+- [Installation](#installation)
 - [Options](#options)
   - [Sidebar menu](#sidebar-menu)
   - [Sticky sidebar content](#sticky-sidebar-content)
@@ -17,6 +18,20 @@ It pairs a prominent sidebar with uncomplicated content.
 - [Author](#author)
 - [Ported by](#ported-by)
 - [License](#license)
+
+
+## Installation
+
+To install Hyde as your default theme, first install this repository in the `themes/` directory:
+
+    $ cd themes/
+    $ git clone https://github.com/spf13/hyde.git
+
+Second, specify `hyde` as your default theme in the `config.toml` file. Just add the line
+
+    theme = "hyde"
+
+at the top of the file.
 
 
 ## Options
