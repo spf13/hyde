@@ -14,6 +14,6 @@
       {{end}}
     </ul>
 
-    <p>{{ with .Site.Params.copyright }}{{.}}{{ else }}&copy; {{.Now.Format "2006"}}. All rights reserved. {{end}}</p>
+    <p>&copy; {{ with .Site.Params.since }}{{.}}{{ end }}-{{.Now.Format "2006"}}</p>
   </div>
 </div>
