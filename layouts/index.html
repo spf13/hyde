@@ -11,6 +11,7 @@
         {{ if .Site.Params.disqusShortname }} &middot; <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}
       </span>
       {{ .Content }}
+      {{ partial "taxonomy.html" . }}
     </div>
     {{ end }}
     {{ template "_internal/pagination.html" . }}
