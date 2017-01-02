@@ -14,6 +14,12 @@
   <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
   {{ end }}
 
+  <!-- Social -->
+  {{ if in .Site.Params.social "open-graph" }}{{ template "_internal/opengraph.html" . }}{{ end }}
+  {{ if in .Site.Params.social "google-news" }}{{ template "_internal/google_news.html" . }}{{ end }}
+  {{ if in .Site.Params.social "schema" }}{{ template "_internal/schema.html" . }}{{ end }}
+  {{ if in .Site.Params.social "twitter-cards" }}{{ template "_internal/twitter_cards.html" . }}{{ end }}
+
   <!-- CSS -->
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/poole.css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/syntax.css">
