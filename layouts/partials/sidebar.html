@@ -4,7 +4,7 @@
       {{ if isset .Site.Params "gravatarHash" }}
         <img src="https://www.gravatar.com/avatar/{{ .Site.Params.gravatarHash }}?s=200" alt="gravatar" title="{{ .Site.Author.name }}">
       {{ end }}
-      <a href="{{ .Site.BaseURL }}"><h1>{{ .Site.Author.name }}</h1></a>
+      <h1>{{ .Site.Author.name }}</h1>
       <p class="lead">
       {{ with .Site.Params.description }} {{.}} {{ else }}An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.{{end}}
       </p>
