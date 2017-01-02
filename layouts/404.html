@@ -1,12 +1,14 @@
 {{ partial "head.html" . }}
-<body class="{{ .Site.Params.themeColor }}">
+{{ partial "google-analytics.html" . }}
+<body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
 
 {{ partial "sidebar.html" . }}
 
-    <div class="content container">
-      <h1>404: Page not found</h1>
-        <p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href="{{ .Site.BaseURL }}">Head back home</a> to try finding it again.</p>
-    </div>
+<div class="content container">
+  <div class="post">
+    <h2>404. That's an error.</h2>
+  </div>
+</div>
 
-  </body>
+</body>
 </html>
