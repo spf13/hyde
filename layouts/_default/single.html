@@ -5,7 +5,9 @@
 		<div class="content container">
 			<div class="post">
 			 	<h1>{{ .Title }}</h1>
-			  <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+			  <span class="post-date">
+					{{ .Date.Format "Mon, Jan 2, 2006" }}{{ if .Site.Params.disqusShortname }} &middot; <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}
+				</span>
 			      {{ .Content }}
 			</div>
 
