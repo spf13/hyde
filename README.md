@@ -19,6 +19,8 @@ For all configuration options available in Hyde, see the original [documentation
 
 ### Enhancements
 
+- Disqus comment count below post title
 - Google Analytics tracking id
 - Gravatar image in sidebar
+- Reading time below post title
 - And a few other layout changes to my liking
