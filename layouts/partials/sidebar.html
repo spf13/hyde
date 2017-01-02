@@ -17,6 +17,6 @@
       {{end}}
     </ul>
 
-    <p>&copy; {{ with .Site.Params.since }}{{.}}{{ end }}-{{.Now.Format "2006"}}</p>
+    {{ partial "copyright.html" . }}
   </div>
 </div>
