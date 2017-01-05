@@ -1,11 +1,12 @@
 <div style="border-top: 1px solid; padding-top: 10px;">
   {{ if isset .Params "categories" }}
+    In
     {{ range .Params.categories }}
         <a class="label" href="{{ "/categories/" | absURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
     {{ end }}
 {{ end }}
 {{ if isset .Params "tags" }}
-    using tags
+    with tags
     {{ range .Params.tags }}
         <a class="label" href="{{ "/tags/" | absURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
     {{ end }}
