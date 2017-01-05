@@ -4,11 +4,11 @@
   <div class="posts">
     {{ range where .Paginator.Pages "Type" "posts" }}
     <div class="post">
-      <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+      <h1 class="post-title"><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
       <span class="post-date">
         {{ .Date.Format "Jan 2, 2006" }}
         &middot; {{ .ReadingTime }} minute read
-        {{ if .Site.Params.disqusShortname }} &middot; <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}
+        {{ if .Site.Params.disqusShortname }} &middot; <a href="{{ .Permalink }}#disqus_thread" title="Comments on '{{ .Title }}'">Comments</a>{{ end }}
       </span>
       {{ .Content }}
       {{ partial "taxonomy.html" . }}
