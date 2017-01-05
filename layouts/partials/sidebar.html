@@ -5,7 +5,7 @@
         <img src="https://www.gravatar.com/avatar/{{ .Site.Params.gravatarHash }}?s=200" alt="gravatar" title="{{ .Site.Author.name }}">
       {{ end }}
       <h1>{{ .Site.Author.name }}</h1>
-      <p class="lead">
+      <p class="sidebar-lead">
       {{ with .Site.Params.description }} {{.}} {{ else }}An elegant open source and mobile first theme.{{end}}
       </p>
     </div>

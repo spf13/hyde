@@ -1,3 +1,11 @@
+/*
+ * Additional CSS for Hyde-14
+ */
+
+/*
+ * Content
+ */
+
 .page, .post {
   margin-bottom: 2em;
 }
@@ -7,14 +15,45 @@
   padding-left: 0;
   margin: 20px 0;
 }
+
 .pagination > li {
   display: inline;
 }
+
+/*
+ * Sidebar
+ */
 
 .sidebar-about h1 {
   font-size: 1.8rem;
 }
 
-.lead {
+.sidebar-about img {
+  margin: 0 auto 0.5rem auto;
+  width: 150px;
+  height: 150px;
+}
+@media (min-width: 48em) {
+  .sidebar-about img {
+    margin: 0 0 0.75rem 0;
+    width: 175px;
+    height: 175px;
+  }
+}
+@media (min-width: 58em) {
+  .sidebar-about img {
+    margin: 0 0 1rem 0;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.sidebar-nav {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.sidebar-lead {
   font-size: 1rem;
 }
