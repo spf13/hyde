@@ -1,8 +1,8 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      {{ if isset .Site.Params "gravatarHash" }}
-        <img src="https://www.gravatar.com/avatar/{{ .Site.Params.gravatarHash }}?s=200" alt="gravatar" title="{{ .Site.Author.name }}">
+      {{ if isset .Site.Author "gravatar" }}
+        <img src="https://www.gravatar.com/avatar/{{ .Site.Author.gravatar }}?s=200" alt="gravatar" title="{{ .Site.Author.name }}">
       {{ end }}
       <h1>{{ .Site.Author.name }}</h1>
       <p class="sidebar-lead">
@@ -16,6 +16,15 @@
       {{ range .Site.Menus.main }}
         <li><a href="{{.URL}}"> {{ .Name }} </a></li>
       {{end}}
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      {{ with .Site.Author.github }}<a href="https://github.com/{{ . }}"><i class="fa fa-github-square fa-2x"></i></a>{{ end }}
+      {{ with .Site.Author.linkedin }}<a href="https://www.linkedin.com/in/{{ . }}"><i class="fa fa-linkedin-square fa-2x"></i></a>{{ end }}
+      {{ with .Site.Author.twitter }}<a href="https://twitter.com/{{ . }}"><i class="fa fa-twitter-square fa-2x"></i></a>{{ end }}
+      {{ if .Site.Params.rss }}<a href="{{ "/index.xml" | absURL }}" type="application/rss+xml"><i class="fa fa-rss-square fa-2x"></i></a>{{ end }}
+      </li>
     </ul>
 
     {{ partial "copyright.html" . }}
