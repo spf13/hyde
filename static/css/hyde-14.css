@@ -20,6 +20,10 @@
   display: inline;
 }
 
+.post-date-list {
+  margin-right: 1.5rem;
+}
+
 ul.posts {
   list-style: none;
 }

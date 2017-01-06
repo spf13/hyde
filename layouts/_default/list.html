@@ -5,7 +5,8 @@
     <h1 class="post-title">{{ .Title }}</h1>
     {{ range .Data.Pages }}
       <li>
-        <span><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></span>
+        <span class="post-date-list"><time>{{ .Date.Format "2006-01-02" }}</time></span>
+        <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
       </li>
     {{ end }}
   </ul>
