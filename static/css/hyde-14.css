@@ -20,6 +20,10 @@
   display: inline;
 }
 
+ul.posts {
+  list-style: none;
+}
+
 /*
  * Sidebar
  */

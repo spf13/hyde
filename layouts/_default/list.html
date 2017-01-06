@@ -2,6 +2,7 @@
 
 <div class="content container">
   <ul class="posts">
+    <h1 class="post-title">{{ .Title }}</h1>
     {{ range .Data.Pages }}
       <li>
         <span><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></span>
