@@ -24,4 +24,5 @@ For all configuration options available in Hyde, see the original [documentation
 - Gravatar image in sidebar
 - Open Graph, Google News, Schema & Twitter Cards meta tags
 - Reading time below post title
+- Social links with [Font Awesome](http://fontawesome.io/) 4.7.0
 - And a few other layout changes to my liking
