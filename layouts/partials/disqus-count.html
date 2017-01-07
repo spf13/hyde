@@ -1,1 +1,3 @@
- <script id="dsq-count-scr" src="//{{ .Site.Params.disqusShortname }}.disqus.com/count.js" async></script>
+{{ with .Site.Params.disqusShortname }}
+  <script id="dsq-count-scr" src="//{{ . }}.disqus.com/count.js" async></script>
+{{ end }}
