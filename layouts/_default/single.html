@@ -12,9 +12,9 @@
 		{{ partial "taxonomy.html" . }}
 	</div>
 
-	{{ if and (isset .Site.Params "disqusShortname") (ne .Site.Params.disqusShortname "") }}
+	{{ if .Site.Params.disqusShortname }}
 		<h2>Comments</h2>
-		{{ partial "disqus" . }}
+		{{ partial "disqus.html" . }}
 	{{ end }}
 </div>
 
