@@ -18,12 +18,14 @@
       {{end}}
     </ul>
 
-    <p>
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
       {{ if isset .Site.Author "github" }}<a href="https://github.com/{{ .Site.Author.github }}" title="{{ .Site.Author.name }} on GitHub"><i class="fa fa-github-square fa-2x"></i></a>{{ end }}
       {{ if isset .Site.Author "linkedin" }}<a href="https://www.linkedin.com/in/{{ .Site.Author.linkedin }}" title="{{ .Site.Author.name }} on LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>{{ end }}
       {{ if isset .Site.Author "twitter" }}<a href="https://twitter.com/{{ .Site.Author.twitter }}" title="{{ .Site.Author.name }} on Twitter"><i class="fa fa-twitter-square fa-2x"></i></a>{{ end }}
       {{ if .Site.Params.rss }}<a href="{{ "/index.xml" | absURL }}" type="application/rss+xml" title="Subscribe to all {{ .Site.Title }} content"><i class="fa fa-rss-square fa-2x"></i></a>{{ end }}
-    </p>
+      </li>
+    </ul>
 
     {{ partial "copyright.html" . }}
   </div>
