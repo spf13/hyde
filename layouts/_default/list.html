@@ -1,8 +1,8 @@
 {{ partial "head.html" . }}
 
 <div class="content container">
+  <h1 class="post-title">{{ .Title }}</h1>
   <ul class="posts">
-    <h1 class="post-title">{{ .Title }}</h1>
     {{ range .Data.Pages }}
       <li>
         <span class="post-date-list"><time>{{ .Date.Format "2006-01-02" }}</time></span>
