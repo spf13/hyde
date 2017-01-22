@@ -21,16 +21,14 @@
   {{ if in .Site.Params.social "twitter-summary-card" }}{{ partial "twitter-summary-card.html" . }}{{ end }}
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/css/poole.css">
-  <link rel="stylesheet" href="/css/syntax.css">
-  <link rel="stylesheet" href="/css/hyde.css">
-  <link rel="stylesheet" href="/css/hyde-14.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700%7CAbril+Fatface">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/{{ if in .Site.Params.minified "css" }}minified/{{ end }}poole.css">
+  <link rel="stylesheet" href="/css/{{ if in .Site.Params.minified "css" }}minified/{{ end }}syntax.css">
+  <link rel="stylesheet" href="/css/{{ if in .Site.Params.minified "css" }}minified/{{ end }}hyde.css">
+  <link rel="stylesheet" href="/css/{{ if in .Site.Params.minified "css" }}minified/{{ end }}hyde-14.css">
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+  <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png"> -->
+  <!-- <link rel="shortcut icon" href="/favicon.png"> -->
 
   <!-- RSS -->
   <link href="/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
