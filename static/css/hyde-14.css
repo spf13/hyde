@@ -1,4 +1,4 @@
-/* minifyOnSave, filenamePattern: minified/$1.$2 */
+/* minifyOnSave, filenamePattern: minified/1/$1.$2 */
 /*
  * Additional CSS for Hyde-14
  */
@@ -7,8 +7,14 @@
  * Content
  */
 
+blockquote {
+  border-left: .1rem solid #e5e5e5;
+}
+
 .page, .post {
-  margin-bottom: 2em;
+  padding-bottom: 1em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .pagination {
