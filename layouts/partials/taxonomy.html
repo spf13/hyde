@@ -1,8 +1,17 @@
 <div class="taxonomy">
-  {{ if isset .Params "tags" }}
+
+  {{ if .Params.categories }}
+    <i class="fa fa-folder-open" aria-hidden="true"></i>
+    {{ range .Params.categories }}
+      <a class="label" href="{{ "/categories/" | absURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+    {{ end }}
+  {{ end }}
+
+  {{ if .Params.tags }}
       <i class="fa fa-tags fa-fw"></i>
       {{ range .Params.tags }}
           <a class="label" href="{{ "/tags/" | absURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
       {{ end }}
   {{ end }}
+
 </div>
