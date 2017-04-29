@@ -17,6 +17,14 @@ blockquote {
   border-bottom: 1px solid #e5e5e5;
 }
 
+/*
+.taxonomy {
+  margin-top: 1.5em;
+  padding-top: 0.75em;
+  border-top: 1px solid #e5e5e5;
+}
+*/
+
 .pagination {
   display: inline-block;
   padding-left: 0;
