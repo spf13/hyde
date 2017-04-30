@@ -6,14 +6,15 @@
 		<span class="post-date">
 			{{ .Date.Format "Jan 2, 2006" }}
 			&middot; {{ .ReadingTime }} minute read
-			{{ if .Site.Params.disqusShortname }} &middot; <a href="{{ .Permalink }}#disqus_thread" title="Comments on '{{ .Title }}'">Comments</a>{{ end }}
+			{{ if and (.Site.Params.disqusShortname) (ne .Params.comments false) }}
+				&middot; <a href="{{ .Permalink }}#disqus_thread" title="Comments on '{{ .Title }}'">Comments</a>
+			{{ end }}
 		</span>
 		{{ .Content }}
 		{{ partial "taxonomy.html" . }}
 	</div>
 
-	{{ if .Site.Params.disqusShortname }}
-		<h2>Comments</h2>
+	{{ if and (.Site.Params.disqusShortname) (ne .Params.comments false) }}
 		{{ partial "disqus.html" . }}
 	{{ end }}
 </div>
