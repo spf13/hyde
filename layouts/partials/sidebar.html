@@ -1,13 +1,16 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
+
     <div class="sidebar-about">
-      {{ if isset .Site.Author "gravatar" }}
+      {{ if .Site.Author.gravatar }}
         <img src="https://www.gravatar.com/avatar/{{ .Site.Author.gravatar }}?s=200" alt="gravatar" title="{{ .Site.Author.name }}">
       {{ end }}
       <h1>{{ .Site.Author.name }}</h1>
-      <p class="sidebar-lead">
-      {{ with .Site.Params.description }} {{.}} {{ else }}An elegant open source and mobile first theme.{{end}}
-      </p>
+      {{ with .Site.Params.description }}
+        <p class="sidebar-lead">
+          {{ . }}
+        </p>
+      {{end}}
     </div>
 
     <ul class="sidebar-nav">
@@ -20,14 +23,15 @@
 
     <ul class="sidebar-nav">
       <li class="sidebar-nav-item">
-      {{ if isset .Site.Author "github" }}<a href="https://github.com/{{ .Site.Author.github }}" title="{{ .Site.Author.name }} on GitHub"><i class="fa fa-github-square fa-2x"></i></a>{{ end }}
-      {{ if isset .Site.Author "linkedin" }}<a href="https://www.linkedin.com/in/{{ .Site.Author.linkedin }}" title="{{ .Site.Author.name }} on LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>{{ end }}
-      {{ if isset .Site.Author "twitter" }}<a href="https://twitter.com/{{ .Site.Author.twitter }}" title="{{ .Site.Author.name }} on Twitter"><i class="fa fa-twitter-square fa-2x"></i></a>{{ end }}
-      {{ if isset .Site.Author "external" }}<a href="{{ .Site.Author.external }}" title="{{ .Site.Author.name }} on {{ .Site.Author.external }}" target="_blank"><i class="fa fa-external-link-square fa-2x"></i></a>{{ end }}
+      {{ if .Site.Author.github }}<a href="https://github.com/{{ .Site.Author.github }}" title="{{ .Site.Author.name }} on GitHub"><i class="fa fa-github-square fa-2x"></i></a>{{ end }}
+      {{ if .Site.Author.linkedin }}<a href="https://www.linkedin.com/in/{{ .Site.Author.linkedin }}" title="{{ .Site.Author.name }} on LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>{{ end }}
+      {{ if .Site.Author.twitter }}<a href="https://twitter.com/{{ .Site.Author.twitter }}" title="{{ .Site.Author.name }} on Twitter"><i class="fa fa-twitter-square fa-2x"></i></a>{{ end }}
+      {{ if .Site.Author.external }}<a href="{{ .Site.Author.external }}" title="{{ .Site.Author.name }} on {{ .Site.Author.external }}" target="_blank"><i class="fa fa-external-link-square fa-2x"></i></a>{{ end }}
       {{ if .Site.Params.rss }}<a href="{{ "/index.xml" | absURL }}" type="application/rss+xml" title="Subscribe to all {{ .Site.Title }} content"><i class="fa fa-rss-square fa-2x"></i></a>{{ end }}
       </li>
     </ul>
 
     {{ partial "copyright.html" . }}
+    
   </div>
 </div>
