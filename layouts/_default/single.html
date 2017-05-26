@@ -1,13 +1,13 @@
-	{{ partial "head.html" . }}
-	<body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
-		{{ partial "sidebar.html" . }}
+{{ partial "head.html" . }}
+<body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
+  {{ partial "sidebar.html" . }}
 
-		<div class="content container">
-			<div class="post">
-			 	<h1>{{ .Title }}</h1>
-			  <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
-			      {{ .Content }}
-			</div>
+  <div class="content container">
+    <div class="post">
+      <h1>{{ .Title }}</h1>
+      <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+      {{ .Content }}
+    </div>
 
 			{{ if .Site.Params.disqusShortname }}
 				<h2>Comments</h2>
@@ -15,5 +15,5 @@
 			{{ end }}
 		</div>
 
-  </body>
+</body>
 </html>
