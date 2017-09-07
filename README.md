@@ -15,6 +15,7 @@ It pairs a prominent sidebar with uncomplicated content.
   - [Themes](#themes)
   - [Reverse layout](#reverse-layout)
   - [Disqus](#disqus)
+  - [Google Analytics](#google-analytics)
 - [Author](#author)
 - [Ported by](#ported-by)
 - [License](#license)
@@ -119,7 +120,7 @@ params:
 
 ### Disqus
 
-You can optionally enable a comment system powered by Disqus for the posts. Simply add the variable `disqusShortname` to  your config file.
+You can optionally enable a comment system powered by Disqus for the posts. Simply add the variable `disqusShortname` to your config file.
 
 **TOML**
 ```toml
@@ -127,6 +128,21 @@ disqusShortname = "spf13"
 ```
 
 > **Note:** Previous version 1.0 the Disqus shortname had to be defined inside the `[params]` block.
+
+
+## Google Analytics
+
+Google Analytics can be enabled by assigning your tracking code to the `googleAnalytics` variable in the config file:
+
+**TOML**
+```toml
+googleAnalytics = "Your tracking code"
+```
+
+**YAML**
+```yaml
+googleAnalytics: Your tracking code
+```
 
 ## Author
 **Mark Otto**

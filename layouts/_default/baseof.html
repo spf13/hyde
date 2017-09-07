@@ -4,5 +4,7 @@
     <div class="content container">
     {{ block "main" . -}}{{- end }}
     </div>
+
+    {{ template "_internal/google_analytics_async.html" . }}
   </body>
 </html>
