@@ -9,9 +9,9 @@
 
     <ul class="sidebar-nav">
       <li><a href="{{ .Site.BaseURL }}">Home</a> </li>
-      {{ range .Site.Menus.main }}
+      {{ range .Site.Menus.main -}}
         <li><a href="{{.URL}}"> {{ .Name }} </a></li>
-      {{end}}
+      {{- end }}
     </ul>
 
     <p>{{ with .Site.Params.copyright }}{{.}}{{ else }}&copy; {{ now.Format "2006"}}. All rights reserved. {{end}}</p>
