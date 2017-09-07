@@ -127,6 +127,11 @@ You can optionally enable a comment system powered by Disqus for the posts. Simp
 disqusShortname = "spf13"
 ```
 
+**YAML**
+```yaml
+disqusShortname : spf13
+```
+
 > **Note:** Previous version 1.0 the Disqus shortname had to be defined inside the `[params]` block.
 
 
