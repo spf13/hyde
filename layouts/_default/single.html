@@ -5,8 +5,8 @@
   {{ .Content }}
 </div>
 
-{{ if .Site.Params.disqusShortname -}}
+{{ if .Site.DisqusShortname -}}
 <h2>Comments</h2>
-
+{{ template "_internal/disqus.html" . }}
 {{- end }}
 {{- end }}

@@ -119,19 +119,14 @@ params:
 
 ### Disqus
 
-You can optionally enable a comment system powered by Disqus for the posts. Simply add the variable `disqusShortname` to the `params` in your config file.
+You can optionally enable a comment system powered by Disqus for the posts. Simply add the variable `disqusShortname` to  your config file.
 
 **TOML**
 ```toml
-[params]
-  disqusShortname = "spf13"
+disqusShortname = "spf13"
 ```
 
-**YAML**
-```yaml
-params:
-  disqusShortname: "spf13"
-```
+> **Note:** Previous version 1.0 the Disqus shortname had to be defined inside the `[params]` block.
 
 ## Author
 **Mark Otto**
