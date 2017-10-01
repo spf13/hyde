@@ -6,7 +6,12 @@
     <a href="{{ .Permalink }}">{{ .Title }}</a>
   </h1>
   <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
-  {{ .Content }}
+  {{ .Summary }}
+  {{ if .Truncated }}
+  <div class="read-more-link">
+    <a href="{{ .RelPermalink }}">Read More…</a>
+  </div>
+  {{ end }}
 </div>
 {{- end }}
 </div>
