@@ -23,6 +23,16 @@ It pairs a prominent sidebar with uncomplicated content.
 
 ## Installation
 
+### Quick Start
+
+To give you a running start this installation puts a fully configured [starter repo](https://github.com/forestryio/hyde-hugo-starter) into your Account and imports it into the [Forestry](https://forestry.io) Content Manager. 
+
+_Forestry Starter-Kit:_
+
+[![Import this project into Forestry](https://assets.forestry.io/import-to-forestry.svg)](https://app.forestry.io/quick-start?repo=forestryio/hyde-hugo-starter&provider=github&engine=hugo&version=0.42)
+
+### Standard Installation
+
 To install Hyde as your default theme, first install this repository in the `themes/` directory:
 
     $ cd themes/
