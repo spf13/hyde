@@ -14,6 +14,7 @@ It pairs a prominent sidebar with uncomplicated content.
   - [Sticky sidebar content](#sticky-sidebar-content)
   - [Themes](#themes)
   - [Reverse layout](#reverse-layout)
+  - [Custom date format](#custom-date-format)
   - [Disqus](#disqus)
   - [Google Analytics](#google-analytics)
 - [Author](#author)
@@ -127,6 +128,28 @@ theme: "hyde"
 params:
   layoutReverse: true
 ```
+
+### Custom date format
+
+To change the date format, add the `dateFormat` variable under `params`, the value must be a valid [Go layout string](https://golang.org/pkg/time/), like so:
+
+**TOML**
+```toml
+theme = "hyde"
+
+[params]
+  dateFormat = "Jan 2, 2006"
+```
+
+**YAML**
+```yaml
+theme: "hyde"
+
+params:
+  dateFormat: "Jan 2, 2006"
+```
+
+Default value: `Mon, Jan 2, 2006`
 
 ### Disqus
 
