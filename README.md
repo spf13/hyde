@@ -11,6 +11,7 @@ It pairs a prominent sidebar with uncomplicated content.
 - [Installation](#installation)
 - [Options](#options)
   - [Sidebar menu](#sidebar-menu)
+  - [Sidebar description](#sidebar-description)
   - [Sticky sidebar content](#sticky-sidebar-content)
   - [Themes](#themes)
   - [Reverse layout](#reverse-layout)
@@ -75,6 +76,25 @@ Menus:
       URL: "https://github.com/username/"
     - Name: "LinkedIn"
       URL: "https://www.linkedin.com/in/username/"
+```
+
+### Sidebar description
+Customise the describe of your page using `description`, like so:
+
+**TOML**
+```toml
+theme = "hyde"
+
+[params]
+  description = "Your custom description"
+```
+
+**YAML**
+```yaml
+theme: "hyde"
+
+params:
+  description = "Your custom description"
 ```
 
 
