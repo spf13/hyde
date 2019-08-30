@@ -52,7 +52,30 @@ Hyde includes some customizable options, typically applied via classes on the `<
 
 ### Sidebar menu
 
-Create a list of nav links in the sidebar by assigning "menu=main" in the front matter.
+Create a list of nav links in the sidebar by assigning "menu=main" in the front matter, like so:
+
+**TOML**
+```toml
+theme = "hyde"
+
+[Menus]
+  main = [
+      {Name = "Github", URL = "https://github.com/username/"},
+      {Name = "LinkedIn", URL = "https://www.linkedin.com/in/username/"}
+  ]
+```
+
+**YAML**
+```yaml
+theme: "hyde"
+
+Menus:
+  main:
+    - Name: "Github"
+      URL: "https://github.com/username/"
+    - Name: "LinkedIn"
+      URL: "https://www.linkedin.com/in/username/"
+```
 
 
 ### Sticky sidebar content
