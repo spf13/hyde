@@ -11,7 +11,14 @@
       <ul class="sidebar-nav">
         <li><a href="{{ .Site.BaseURL }}">Home</a> </li>
         {{ range .Site.Menus.main -}}
-          <li><a href="{{.URL}}"> {{ .Name }} </a></li>
+          <li><a href="{{ .URL }}">
+	  {{ if eq .Name "Github"}}
+	  <i class="fab fa-github"></i>
+	  {{ else if eq .Name "LinkedIn"}}
+	  <i class="fab fa-linkedin"></i>
+	  {{end}}
+	  {{ .Name }}
+	  </a></li>
         {{- end }}
       </ul>
     </nav>
