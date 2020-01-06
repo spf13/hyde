@@ -16,6 +16,8 @@
 	  <i class="fab fa-github"></i>
 	  {{ else if eq .Name "LinkedIn"}}
 	  <i class="fab fa-linkedin"></i>
+          {{else if eq .Name "Resume"}}
+          <i class="fas fa-file-pdf"></i>
 	  {{end}}
 	  {{ .Name }}
 	  </a></li>
