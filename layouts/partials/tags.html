@@ -1,9 +1,21 @@
+<!-- layouts/partials/tags.html -->
 {{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
-<ul>
-  <h4>Tags</h4>
 
-  {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
-  $taxonomy $tag) -}}
+<style type="text/css">
+ul.tagsNav > li {
+  display: inline-block;
+  font-size: 17px;
+  padding: 6px;
+  border-bottom: medium double;
+}
+h4.subHeader {
+  font-size: 20px;
+}
+</style>
+
+<h4 class="subHeader">Tags:</h4>
+<ul class="tagsNav" id="tags">
+  {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
   <li>
     <a href="{{ .Permalink }}">{{ $tag | urlize }}</a>
   </li>
