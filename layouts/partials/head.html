@@ -20,6 +20,12 @@
   <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/poole.css">
   <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/syntax.css">
   <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/hyde.css">
+
+  <!-- UMAMI -->
+  {{ if .Site.Params.Umami.Enabled -}}
+    <script async defer src="{{.Site.Params.Umami.Src}}" data-website-id="{{.Site.Params.Umami.DataWebsiteId}}"></script>
+  {{- end }}
+
   {{ partial "head_fonts.html" . }}
 
   <!-- Icons -->
