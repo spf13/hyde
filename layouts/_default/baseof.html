@@ -5,7 +5,7 @@
     {{ block "main" . -}}{{- end }}
     </main>
 
-    {{ if not .Site.IsServer }}
+    {{ if ne hugo.Environment "development"  }}
       {{ template "_internal/google_analytics.html" . }}
     {{ end }}
   </body>
