@@ -70,12 +70,12 @@ theme = "hyde"
 ```yaml
 theme: "hyde"
 
-Menus:
+menus:
   main:
-    - Name: "Github"
-      URL: "https://github.com/username/"
-    - Name: "LinkedIn"
-      URL: "https://www.linkedin.com/in/username/"
+    - name: Github
+      url: https://github.com/username/
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/username/
 ```
 
 ### Sidebar description
@@ -91,10 +91,10 @@ theme = "hyde"
 
 **YAML**
 ```yaml
-theme: "hyde"
+theme: hyde
 
 params:
-  description = "Your custom description"
+  description: Your custom description
 ```
 
 
@@ -141,10 +141,10 @@ theme = "hyde"
 
 **YAML**
 ```yaml
-theme: "hyde"
+theme: hyde
 
 params:
-  themeColor: "theme-base-09"
+  themeColor: theme-base-09
 ```
 
 To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/hyde/blob/master/public/css/hyde.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
@@ -165,7 +165,7 @@ theme = "hyde"
 
 **YAML**
 ```yaml
-theme: "hyde"
+theme: hyde
 
 params:
   layoutReverse: true
@@ -182,7 +182,7 @@ disqusShortname = "spf13"
 
 **YAML**
 ```yaml
-disqusShortname : spf13
+disqusShortname: spf13
 ```
 
 > **Note:** Previous version 1.0 the Disqus shortname had to be defined inside the `[params]` block.
