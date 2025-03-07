@@ -17,6 +17,7 @@ It pairs a prominent sidebar with uncomplicated content.
   - [Reverse layout](#reverse-layout)
   - [Disqus](#disqus)
   - [Google Analytics](#google-analytics)
+  - [Umami Analytics](#umami-analytics)
 - [Author](#author)
 - [Ported by](#ported-by)
 - [License](#license)
@@ -200,6 +201,17 @@ googleAnalytics = "Your tracking code"
 **YAML**
 ```yaml
 googleAnalytics: Your tracking code
+```
+
+## Umami Analytics
+
+If using [umami-analytics](https://umami.is/) add the following lines to your config.toml file:
+
+```toml
+[params.umami]
+  enabled = true
+  dataWebsiteId="your-web-site-id"
+  src="https://analytics.umami.is/script.js"
 ```
 
 ## Author
