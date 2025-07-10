@@ -1,0 +1,19 @@
+{{- $media := .media | default "all" }}
+{{- $resource := .resource }}
+{{- if hugo.IsDevelopment }}
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="{{ $resource.RelPermalink }}"
+    media="{{ $media }}" />
+{{- else }}
+  {{- with $resource | minify | fingerprint }}
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{{ .RelPermalink }}"
+      media="{{ $media }}"
+      integrity="{{ .Data.Integrity }}"
+      crossorigin="anonymous" />
+  {{- end }}
+{{- end -}}
