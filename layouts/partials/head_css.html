@@ -1,0 +1,8 @@
+{{- partial "head_css_link.html" (dict "path" "css/print.css" "media" "print" ) }}
+{{- $others := slice  (resources.Get "css/poole.css") (resources.Get "css/syntax.css") (resources.Get "css/hyde.css") }}
+{{- with  (resources.Get "css/custom.css") }}
+  {{ $others = $others | append  . }}
+{{- end }}
+{{- $other := $others | resources.Concat "css/hyde.css" }}
+{{- partial "head_css_link_resource.html" (dict "resource" $other) }}
+{{- partial "head_fonts.html" . -}}

@@ -1,0 +1,5 @@
+{{- $path :=  .path }}
+{{- $media := or .media "all" }}
+{{- with resources.Get $path }}
+  {{- partial "head_css_link_resource.html" (dict "resource" . "media" $media ) }}
+{{- end -}}

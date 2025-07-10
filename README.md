@@ -171,6 +171,10 @@ params:
   layoutReverse: true
 ```
 
+### Custom CSS
+
+Add a file to `assets/css/custom.css` in your Hugo project and it will be appended to the CSS bundle.
+
 ### Disqus
 
 You can optionally enable a comment system powered by Disqus for the posts. Simply add the variable `disqusShortname` to your config file.
