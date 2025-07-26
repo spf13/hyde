@@ -1,0 +1,11 @@
+{{ $print := resources.Get "css/print.css" | resources.Minify | resources.Fingerprint }}
+{{ $poole := resources.Get "css/poole.css" }}
+{{ $syntax := resources.Get "css/syntax.css" }}
+{{ $hyde := resources.Get "css/hyde.css" }}
+{{ $overrides := resources.Get "css/overrides.css" }}
+
+{{ $css := slice $poole $syntax $hyde $overrides | resources.Concat "css/bundle.css" | resources.Minify |
+resources.Fingerprint }}
+
+<link type="text/css" rel="stylesheet" href="{{ $print.Permalink }}" media="print">
+<link type="text/css" rel="stylesheet" href="{{ $css.Permalink }}">
