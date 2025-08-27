@@ -3,6 +3,6 @@
 {{- with  (resources.Get "css/custom.css") }}
   {{ $others = $others | append  . }}
 {{- end }}
-{{- $other := $others | resources.Concat "css/hyde.css" }}
+{{- $other := $others | resources.Concat "css/hyde-bundle.css" }}
 {{- partial "head_css_link_resource.html" (dict "resource" $other) }}
 {{- partial "head_fonts.html" . -}}
